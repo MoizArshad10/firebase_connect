@@ -1,0 +1,55 @@
+1) npm install -g firebase-tools
+2) dart pub gloabl activate flutterfire_cli
+3) add pkg in pubspec firebase_core:
+
+4) firebaselogin
+
+if you see an error so you must have to go to powershell and run as administrator 
+
+First check and add this
+Get-ExecutionPolicy
+they give you Restricted
+
+Second add this 
+Set-ExecutionPolicy RemoteSigned
+
+5) flutterfire configure
+
+if you facing an error then 
+
+run this command
+
+6) firebase login --reauth
+
+7) then again run 
+flutterfire configure
+
+
+after that go to main.dart
+paste this
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+and replace this function
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
+}
+
+
+ then go to register page and add this 
+
+TextEditingController usernameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+go to separately inputfiled 
+controller : usernameCOntroller do it with other two as well
+
+8) go to android and then app here build.gradle file
+        minSdkVersion 20
+
