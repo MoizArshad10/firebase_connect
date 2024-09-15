@@ -2,7 +2,7 @@
 2) dart pub global activate flutterfire_cli
 3) add pkg in pubspec firebase_core:
 
-4) firebaselogin
+4) firebase login
 
 if you see an error so you must have to go to powershell and run as administrator 
 
